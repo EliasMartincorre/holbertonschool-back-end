@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ get data from the API """
+import csv
 import requests
 import sys
-import csv
 
 if len(sys.argv) > 1:
     employee_id = sys.argv[1]

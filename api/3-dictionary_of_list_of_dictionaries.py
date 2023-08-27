@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ get data from the API """
-import requests
+
 from json import dump
+import requests
 
 
 # Get the employee data from the API
@@ -13,7 +14,7 @@ dictionary = {}
 for usuario in employee_data:
     lista = []
     url = f"https://jsonplaceholder.typicode.com/todos?userId={usuario['id']}"
-    todo_response = requests.get(todo_url)
+    todo_response = requests.get(url)
     todo_data = todo_response.json()
     for task in todo_data:
         t = task['title']
